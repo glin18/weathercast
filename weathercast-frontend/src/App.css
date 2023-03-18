@@ -15,6 +15,7 @@ body {
   height: 80vh;
   margin: 50px auto;
   border-radius: 40px;
+  display:flex;
 }
 
 /* Left Container */
@@ -109,5 +110,15 @@ div.bar{
   font-size: 20px;
   border-radius: 10px;
   padding: 5px 20px;
+}
+
+/* Right Container */
+.right-container{
+  padding: 40px 0px 0px 40px;
+}
+
+.today{
+  font-size: 60px;
+  font-weight: 700;
 }
 

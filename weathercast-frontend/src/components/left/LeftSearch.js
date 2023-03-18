@@ -9,7 +9,9 @@ export const LeftSearch = () => {
             <div className="bar"></div>
         </div>
         <div className="search">
-            <input placeholder="Enter Location"></input>
+            <form>
+                <input placeholder="Enter Location"></input>
+            </form>
         </div>
     </div>
   )
