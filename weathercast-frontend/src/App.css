@@ -22,7 +22,7 @@ body {
   height: 100%;
   width: 52%;
   border-radius: 40px;
-  background-image: url("./images/weather-background2.png");
+  background-image: url("./images/weather-background4.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 70%;
@@ -72,10 +72,11 @@ div.location-inner-container div:last-child{
 
 /* Left Search */
 
-/* div.left-search-container{
+.left-search-container{
   display: flex;
   flex-direction: column;
-} */
+  align-items: center;
+}
 
 div.center-message{
   color: white;
@@ -83,16 +84,30 @@ div.center-message{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 240px;
   font-size: 35px;
   font-weight: 500;
+  text-align: center;
 }
 
 div.bar{
   height:8px;
   border-radius: 5px;
-  margin-top: 15px;
+  margin-top: 25px;
   background-color: white;
   width: 200px;
+}
+
+.search input{
+  outline: none;
+  width: 400px;
+  height: 30px;
+  background-color: rgb(207, 206, 206);
+  margin-top: 35px;
+  opacity: 80%;
+  color: rgb(70, 69, 69);
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px 20px;
 }
 
