@@ -1,0 +1,29 @@
+/* Body */
+body {
+  background: linear-gradient(#6782B4, #B1BFD8);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Outer Container */
+.outer-container {
+  background-color: white;
+  max-width: 1400px;
+  width: 100%;
+  height: 80vh;
+  margin: 50px auto;
+  border-radius: 40px;
+}
+
+/* Left Container */
+.left-container{
+  height: 100%;
+  width: 50%;
+  border-radius: 40px;
+  background-image: url("./images/weather-background2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 70%;
+}
