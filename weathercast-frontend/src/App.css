@@ -72,13 +72,27 @@ div.location-inner-container div:last-child{
 
 /* Left Search */
 
+/* div.left-search-container{
+  display: flex;
+  flex-direction: column;
+} */
+
 div.center-message{
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 120px;
   font-size: 35px;
   font-weight: 500;
+}
+
+div.bar{
+  height:8px;
+  border-radius: 5px;
+  margin-top: 15px;
+  background-color: white;
+  width: 200px;
 }
 

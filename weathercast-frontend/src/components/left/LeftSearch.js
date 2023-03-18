@@ -3,11 +3,12 @@ import "../../App.css"
 
 export const LeftSearch = () => {
   return (
-    <div>
+    <div className="left-search-container">
         <div className="center-message">
             The One Stop Shop for Weather Forecast
+            <div className="bar"></div>
         </div>
-        <div className="bar"></div>
+        
     </div>
   )
 }
