@@ -122,21 +122,53 @@ div.bar{
   font-weight: 700;
 }
 
+.daily{
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
 /* Today Card */
+
 .today-card{
   margin-top: 30px;
-  height: 150px;
+  height: 250px;
   width: 550px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgb(136, 134, 134);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+}
+
+.today-card-right{
+  color: grey;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
 }
 
 .vertical-border{
   background-color: grey;
-  height: 100px;
+  height: 150px;
   width: 2px;
 }
+
+.today-card-temperature{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.today-card-status{
+  font-size: 35px;
+}
+
+.today-card-date{
+  font-size: 20px;
+  color: grey;
+  margin-top: 5px;
+}
+
 

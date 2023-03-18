@@ -8,6 +8,9 @@ export const RightContainer = () => {
             Today
         </div>
         <TodayCard/>
+        <div className="daily">
+            Daily
+        </div>
     </div>
   )
 }
