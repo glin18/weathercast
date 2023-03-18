@@ -101,7 +101,7 @@ div.bar{
 
 .search input{
   outline: none;
-  width: 400px;
+  width: 300px;
   height: 30px;
   background-color: rgb(207, 206, 206);
   margin-top: 35px;
@@ -120,5 +120,23 @@ div.bar{
 .today{
   font-size: 60px;
   font-weight: 700;
+}
+
+/* Today Card */
+.today-card{
+  margin-top: 30px;
+  height: 150px;
+  width: 550px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgb(136, 134, 134);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.vertical-border{
+  background-color: grey;
+  height: 100px;
+  width: 2px;
 }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { TodayCard } from "./right/TodayCard"
 
 export const RightContainer = () => {
   return (
@@ -6,6 +7,7 @@ export const RightContainer = () => {
         <div className="today">
             Today
         </div>
+        <TodayCard/>
     </div>
   )
 }
