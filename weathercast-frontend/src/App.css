@@ -20,10 +20,65 @@ body {
 /* Left Container */
 .left-container{
   height: 100%;
-  width: 50%;
+  width: 52%;
   border-radius: 40px;
   background-image: url("./images/weather-background2.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 70%;
 }
+
+/* Left Nav */
+.left-nav-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 35px 0px 40px;
+  align-items: center;
+}
+
+.title{
+  color: white;
+  font-size: 27px;
+  font-weight: 400;
+  text-shadow: 2px 2px 10px grey;
+}
+
+.location-container{
+  height: 60px;
+  width: 250px;
+  background-color:rgb(44, 43, 43);
+  opacity: 60%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+div.location-container img{
+  height: 40px;
+  width: 40px;
+}
+
+div.location-inner-container div:first-child{
+  color: rgb(255, 255, 255);
+}
+
+div.location-inner-container div:last-child{
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* Left Search */
+
+div.center-message{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  font-size: 35px;
+  font-weight: 500;
+}
+
