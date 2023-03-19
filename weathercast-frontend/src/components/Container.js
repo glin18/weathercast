@@ -5,10 +5,13 @@ import { RightContainer } from "./RightContainer";
 import axios from "axios";
 
 export const HandlerContext = createContext(null);
+export const DataContext = createContext(null);
 
 export const Container = () => {
     const BASE_URL = "http://api.weatherapi.com/v1"
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
+
+    const [data, setData] = useState({})
 
     const onSubmitHandler = (event) => {
         const params = {
@@ -18,6 +21,7 @@ export const Container = () => {
         }
 
         axios.get(BASE_URL + "/forecast.json", {params}).then((response)=>{
+            setData(response.data)
             console.log(response.data)
         })
 
@@ -29,9 +33,10 @@ export const Container = () => {
     <div className="outer-container">
         <HandlerContext.Provider value={onSubmitHandler}>
             <LeftContainer/>
-        </HandlerContext.Provider>    
-        <RightContainer/>
-          
+        </HandlerContext.Provider> 
+        <DataContext.Provider value={data}>  
+            <RightContainer/>
+        </DataContext.Provider> 
     </div>
   )
 }

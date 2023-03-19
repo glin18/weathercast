@@ -3,6 +3,7 @@ import { TodayCard } from "./right/TodayCard"
 import { DailyCard } from "./right/DailyCard"
 
 export const RightContainer = () => {
+
   return (
     <div className="right-container">
         <div className="today">
