@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../Container'
 
-export const TodayCard = () => {
+export const TodayCard = ( {onClickCardHandler}) => {
   const data = useContext(DataContext);
 
   return (
-    <div className="today-card">
+    <div className="today-card" onClick = {() => onClickCardHandler(0)}>
       
         {data?.current && 
         <>

@@ -3,7 +3,7 @@ import "../../App.css"
 import { HandlerContext } from "../Container"
  
 export const LeftSearch = () => {
-    const onSubmitHandler = useContext( HandlerContext );
+    const {onSubmitHandler} = useContext( HandlerContext );
     // const [message, setMessage] = useState("");
 
     // const onChangeHandler = (event) => {

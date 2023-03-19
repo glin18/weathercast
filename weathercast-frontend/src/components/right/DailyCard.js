@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const DailyCard = ({index, data}) => {
+export const DailyCard = ({index, data, onClickCardHandler}) => {
   return (
-    <div className="daily-card" key={index}>
+    <div className="daily-card" key={index} onClick={onClickCardHandler}>
         {data?.day && 
         <>
             <div className="daily-card-temperature">

@@ -12,7 +12,7 @@ export const LeftNav = () => {
         <div className="location-container">
             <img src={LocationIcon}></img>
             <div className="location-inner-container">
-                <div>Current Location</div>
+                {/* <div>Current Location</div> */}
                 <div>{data?.location ? data.location.name + ", " + data.location.country : "No Location"}</div>
             </div>
         </div>

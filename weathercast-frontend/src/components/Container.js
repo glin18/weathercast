@@ -12,8 +12,9 @@ export const Container = () => {
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 
     const [data, setData] = useState({})
-
+    
     const onSubmitHandler = (event) => {
+
         const params = {
             "key":API_KEY,
             "q":event.target.elements.search.value,
@@ -29,10 +30,14 @@ export const Container = () => {
         event.target.elements.search.value = ""
     }
 
+    const onClickCardHandler = (day) => {
+        console.log(day)
+    }
+
   return (
     <div className="outer-container">
         <DataContext.Provider value={data}> 
-            <HandlerContext.Provider value={onSubmitHandler}>
+            <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler}}>
                 <LeftContainer/>
                 <RightContainer/>
             </HandlerContext.Provider> 
