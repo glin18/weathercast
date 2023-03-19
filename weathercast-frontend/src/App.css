@@ -144,6 +144,7 @@ div.bar{
 .today-card:hover{
   box-shadow: 0 4px 1rem -4px #000;
   transform: translateY(-3px);
+  cursor: pointer;
 }
 
 .today-card-right{
@@ -202,6 +203,7 @@ div.bar{
 .daily-card:hover{
   box-shadow: 0 4px 1rem -4px #000;
   transform: translateY(-3px);
+  cursor: pointer;
 }
 
 .daily-card-temperature{
