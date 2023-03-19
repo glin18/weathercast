@@ -178,6 +178,25 @@ div.bar{
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgb(136, 134, 134);
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.daily-card-temperature{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.daily-card-status{
+  font-size: 35px;
+}
+
+.daily-card-date{
+  font-size: 20px;
+  color: grey;
+  margin-top: 5px;
 }
 
 
