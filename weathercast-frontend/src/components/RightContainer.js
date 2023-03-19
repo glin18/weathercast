@@ -1,5 +1,6 @@
 import React from 'react'
 import { TodayCard } from "./right/TodayCard"
+import { DailyCard } from "./right/DailyCard"
 
 export const RightContainer = () => {
   return (
@@ -11,6 +12,7 @@ export const RightContainer = () => {
         <div className="daily">
             Daily
         </div>
+        <DailyCard/>
     </div>
   )
 }

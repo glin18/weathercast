@@ -135,7 +135,7 @@ div.bar{
   height: 250px;
   width: 550px;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px rgb(136, 134, 134);
+  box-shadow: 2px 2px 10px rgb(136, 134, 134);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -169,6 +169,15 @@ div.bar{
   font-size: 20px;
   color: grey;
   margin-top: 5px;
+}
+
+/* Daily Card */
+.daily-card{
+  height: 250px;
+  width: 225px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgb(136, 134, 134);
+  margin-top: 20px;
 }
 
 
