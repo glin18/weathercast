@@ -12,7 +12,15 @@ export const RightContainer = () => {
         <div className="daily">
             Daily
         </div>
-        <DailyCard/>
+        <div className="daily-card-container">
+            <DailyCard/>
+            <DailyCard/>
+            <DailyCard/>
+            <DailyCard/>
+            <DailyCard/>
+            <DailyCard/>
+        </div>
+        
     </div>
   )
 }

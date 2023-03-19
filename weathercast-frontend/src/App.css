@@ -141,6 +141,11 @@ div.bar{
   align-items: center;
 }
 
+.today-card:hover{
+  box-shadow: 0 4px 1rem -4px #000;
+  transform: translateY(-3px);
+}
+
 .today-card-right{
   color: grey;
   font-size: 20px;
@@ -172,16 +177,31 @@ div.bar{
 }
 
 /* Daily Card */
+.daily-card-container{
+  margin-top: 20px;
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  max-width: 590px;
+  
+}
+
 .daily-card{
   height: 250px;
   width: 225px;
+  min-width: 225px;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgb(136, 134, 134);
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center; 
   align-items: center;
+  margin: 10px 10px;
+}
+
+.daily-card:hover{
+  box-shadow: 0 4px 1rem -4px #000;
+  transform: translateY(-3px);
 }
 
 .daily-card-temperature{
