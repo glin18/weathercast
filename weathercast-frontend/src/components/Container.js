@@ -31,10 +31,10 @@ export const Container = () => {
 
   return (
     <div className="outer-container">
-        <HandlerContext.Provider value={onSubmitHandler}>
-            <LeftContainer/>
-        </HandlerContext.Provider> 
-        <DataContext.Provider value={data}>  
+        <DataContext.Provider value={data}> 
+            <HandlerContext.Provider value={onSubmitHandler}>
+                <LeftContainer/>
+            </HandlerContext.Provider> 
             <RightContainer/>
         </DataContext.Provider> 
     </div>
