@@ -12,6 +12,9 @@ export const Container = () => {
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 
     const [data, setData] = useState({})
+
+    // -1 for home page, 0 - 6 for today till next week
+    const [page, setPage] = useState(-1)
     
     const onSubmitHandler = (event) => {
 
@@ -32,14 +35,26 @@ export const Container = () => {
 
     const onClickCardHandler = (day) => {
         console.log(day)
+        setPage(day)
     }
 
   return (
     <div className="outer-container">
         <DataContext.Provider value={data}> 
             <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler}}>
-                <LeftContainer/>
-                <RightContainer/>
+                {page === -1 && 
+                <>
+                    <LeftContainer/>
+                    <RightContainer/>
+                </>
+                }
+                {page >= 0 && 
+                <>
+                    {page}   
+                </>
+                
+                }
+                
             </HandlerContext.Provider> 
         </DataContext.Provider> 
     </div>

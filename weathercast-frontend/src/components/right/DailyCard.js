@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { HandlerContext } from "../Container"
 
-export const DailyCard = ({index, data, onClickCardHandler}) => {
+
+export const DailyCard = ({index, data}) => {
+    const { onClickCardHandler } = useContext(HandlerContext)
+
   return (
-    <div className="daily-card" key={index} onClick={onClickCardHandler}>
+    <div className="daily-card" key={index} onClick={()=>onClickCardHandler(index+1)}>
         {data?.day && 
         <>
             <div className="daily-card-temperature">

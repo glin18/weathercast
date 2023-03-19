@@ -22,16 +22,16 @@ export const RightContainer = () => {
             {
                 data?.forecast?.forecastday ? 
                 data.forecast.forecastday.slice(1).map((data, index)=>(
-                    <DailyCard key={index} data={data} onClickCardHandler={()=> onClickCardHandler(index + 1)}/>
+                    <DailyCard index={index} data={data}/>
                 ))
                 : 
                 <>
-                    <DailyCard/>
-                    <DailyCard/>
-                    <DailyCard/>
-                    <DailyCard/>
-                    <DailyCard/>
-                    <DailyCard/>
+                    <DailyCard index={0}/>
+                    <DailyCard index={1}/>
+                    <DailyCard index={2}/>
+                    <DailyCard index={3}/>
+                    <DailyCard index={4}/>
+                    <DailyCard index={5}/>
                 </>
             }
         </div>
