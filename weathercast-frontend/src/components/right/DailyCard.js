@@ -1,17 +1,17 @@
 import React from 'react'
 
-export const DailyCard = () => {
+export const DailyCard = ({index, data}) => {
   return (
-    <div className="daily-card">
+    <div className="daily-card" key={index}>
         <div className="daily-card-temperature">
-            28°C
+            {data?.day?.avgtemp_c + "°C" || "28°C"}
         </div>
         <div>
-            <div className="daily-card-status">Rain</div>
+            <div className="daily-card-status">{data?.day?.condition?.text || "Rain"}</div>
             <div></div>
         </div>
         <div className="daily-card-date">
-            Tue 28, July 20
+            {data?.date || "Tue 28, July 20"}
         </div>
     </div>
   )
