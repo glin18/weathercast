@@ -34,8 +34,8 @@ export const Container = () => {
         <DataContext.Provider value={data}> 
             <HandlerContext.Provider value={onSubmitHandler}>
                 <LeftContainer/>
+                <RightContainer/>
             </HandlerContext.Provider> 
-            <RightContainer/>
         </DataContext.Provider> 
     </div>
   )
