@@ -11,12 +11,17 @@ export const Container = () => {
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 
     const onSubmitHandler = (event) => {
-        // axios.get(BASE_URL).then((response)=>{
-        //     console.log(response.data)
-        // })
+        const params = {
+            "key":API_KEY,
+            "q":event.target.elements.search.value,
+            "days":7,
+        }
+
+        axios.get(BASE_URL + "/forecast.json", {params}).then((response)=>{
+            console.log(response.data)
+        })
+
         event.preventDefault()
-        console.log(event.target.elements)
-        console.log(event.target.elements.search.value)
         event.target.elements.search.value = ""
     }
 

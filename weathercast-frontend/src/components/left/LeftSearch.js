@@ -17,7 +17,7 @@ export const LeftSearch = () => {
             <div className="bar"></div>
         </div>
         <div className="search">
-            <form onSubmit={onSubmitHandler}  autocomplete="off">
+            <form onSubmit={onSubmitHandler}  autoComplete="off">
                 <input id="search" placeholder="Enter Location" value={message} onChange={onChangeHandler}></input>
             </form>
         </div>
