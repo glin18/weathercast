@@ -12,7 +12,7 @@ export const DetailsContainer = ({ data , page }) => {
             <div className="details-title">{data.location.country}, {data.location.region}, {data.location.tz_id}</div>
             <div className="details-title">{data.forecast.forecastday[page].date}</div>
             <DetailsCard data={ data } page={page}/>
-            <DetailsGraph/>
+            <DetailsGraph data={data} page={page}/>
         </>
         : <></>}
         <div className="return" onClick={onClickReturnHandler}>Return</div>
