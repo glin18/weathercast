@@ -2,6 +2,7 @@ import React, { useState, createContext } from 'react';
 import '../App.css';
 import { LeftContainer } from "./LeftContainer";
 import { RightContainer } from "./RightContainer";
+import { DetailsContainer } from "./DetailsContainer";
 import axios from "axios";
 
 export const HandlerContext = createContext(null);
@@ -38,10 +39,14 @@ export const Container = () => {
         setPage(day)
     }
 
+    const onClickReturnHandler = () => {
+        setPage(-1)
+    }
+
   return (
     <div className="outer-container">
         <DataContext.Provider value={data}> 
-            <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler}}>
+            <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler, onClickReturnHandler}}>
                 {page === -1 && 
                 <>
                     <LeftContainer/>
@@ -50,7 +55,7 @@ export const Container = () => {
                 }
                 {page >= 0 && 
                 <>
-                    {page}   
+                    <DetailsContainer data={data} page={page}/>  
                 </>
                 
                 }

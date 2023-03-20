@@ -232,4 +232,52 @@ div.bar{
   margin-top: 5px;
 }
 
+/* Details Container */
+.details-container{
+  padding: 40px 0px 0px 40px;
+}
 
+.details-title{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.return {
+  background-color: grey;
+  width: 100px;
+  padding: 5px 6px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Details Card */
+.details-card{
+  height: 250px;
+  width: 550px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgb(136, 134, 134);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.details-bar{
+  height: 200px;
+  width: 2px;
+  background-color: grey;
+  border-radius: 1px;
+}
+
+/* Details Graph */
+
+.details-graph-container{
+  margin-top: 30px;
+  height: 280px;
+  width: 800px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgb(136, 134, 134);
+}
