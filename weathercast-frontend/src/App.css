@@ -178,8 +178,13 @@ div.bar{
   font-weight: 700;
 }
 
+.today-card-status-container{
+  display: flex;
+  align-items: center;
+}
+
 .today-card-status{
-  font-size: 35px;
+  font-size: 27px;
 }
 
 .today-card-date{
@@ -293,7 +298,16 @@ div.bar{
 }
 
 .details-graph-container{
-  padding-top: 32px;
+  padding-top: 40px;
   height: 300px;
   width: 800px;
+}
+
+.details-card-status-container{
+  display: flex;
+  align-items: center;
+}
+
+.details-right{
+  font-size:20px;
 }

@@ -11,8 +11,13 @@ export const TodayCard = ( {onClickCardHandler}) => {
         <>
           <div>
             <div className="today-card-temperature">{data.current.temp_c + "°C" || ""}</div>
-            <div className="today-card-status">{ data?.current?.condition?.text || ""}</div>
+           
+            <div className="today-card-status-container">
+              <div className="today-card-status">{ data?.current?.condition?.text || ""}</div>
+              <img className="today-card-image" src={data?.current?.condition?.icon}></img>
+            </div>
             <div className="today-card-date">{data?.current?.last_updated || ""}</div>
+            
           </div>
           <div className="vertical-border"></div>
 
