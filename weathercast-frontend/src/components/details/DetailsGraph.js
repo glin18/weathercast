@@ -1,5 +1,5 @@
 import React from 'react'
-import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Label } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Label, Legend } from 'recharts';
 
 export const DetailsGraph = ({data , page }) => {
 
@@ -17,7 +17,9 @@ export const DetailsGraph = ({data , page }) => {
                 <YAxis dataKey="temp_c" tickFormatter={(data)=>(data + "°C")}>
                     {/* <Label value="°C" offset={0} angle={-90} position="center" /> */}
                 </YAxis>
-                <Line dataKey="temp_c"/>
+                <Legend verticalAlign="top" height={36}/>
+                <Line name="temperature" dataKey="temp_c"/>
+                <Line name="real feel" dataKey="feelslike_c" stroke="green"/>
                 <Tooltip formatter={(label)=>(label + "°C")}/>
             </LineChart>
         </div>

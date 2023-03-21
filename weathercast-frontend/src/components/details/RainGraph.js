@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Label, Bar } from 'recharts';
+import { BarChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Label, Bar, Legend } from 'recharts';
 
 export const RainGraph = ({data, page}) => {
 
@@ -18,6 +18,7 @@ export const RainGraph = ({data, page}) => {
                 {/* <Label value="°C" offset={0} angle={-90} position="center" /> */}
             </YAxis>
             <Bar dataKey="precip_mm" fill="#318CE7"/>
+            <Legend verticalAlign="top" height={36}/>
             <Tooltip formatter={(label)=>(label + " mm")}/>
         </BarChart>
         </div>
