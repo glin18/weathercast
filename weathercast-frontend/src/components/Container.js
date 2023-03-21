@@ -9,7 +9,7 @@ export const HandlerContext = createContext(null);
 export const DataContext = createContext(null);
 
 export const Container = () => {
-    const BASE_URL = "http://api.weatherapi.com/v1"
+    const BASE_URL = "//api.weatherapi.com/v1"
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 
     const [data, setData] = useState({})
