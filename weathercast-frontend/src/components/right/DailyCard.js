@@ -6,7 +6,7 @@ export const DailyCard = ({index, data}) => {
     const { onClickCardHandler } = useContext(HandlerContext)
 
   return (
-    <div className="daily-card" key={index} onClick={()=>onClickCardHandler(index+1)}>
+    <div className="daily-card" key={index} onClick={data?.day ? ()=>onClickCardHandler(index+1) : undefined}>
         {data?.day && 
         <>
             <div className="daily-card-temperature">

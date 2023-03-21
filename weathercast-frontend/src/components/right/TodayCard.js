@@ -5,7 +5,7 @@ export const TodayCard = ( {onClickCardHandler}) => {
   const data = useContext(DataContext);
 
   return (
-    <div className="today-card" onClick = {() => onClickCardHandler(0)}>
+    <div className="today-card" onClick = {data?.current ? () => onClickCardHandler(0): undefined}>
       
         {data?.current && 
         <>
