@@ -19,7 +19,7 @@ export const LeftSearch = () => {
         <div className="search">
             <form onSubmit={onSubmitHandler}  autoComplete="off">
                 {/* <input id="search" placeholder="Enter Location" value={message} onChange={onChangeHandler}></input> */}
-                <input id="search" placeholder="Enter Location"></input>
+                <input id="search" placeholder="Enter Location" required></input>
             </form>
         </div>
     </div>

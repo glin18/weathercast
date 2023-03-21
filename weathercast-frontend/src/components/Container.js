@@ -28,6 +28,8 @@ export const Container = () => {
         axios.get(BASE_URL + "/forecast.json", {params}).then((response)=>{
             setData(response.data)
             console.log(response.data)
+        }).catch((error)=>{
+            console.log(error)
         })
 
         event.preventDefault()
