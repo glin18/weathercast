@@ -3,6 +3,7 @@ import { HandlerContext } from './Container'
 import { DetailsCard } from "./details/DetailsCard"
 import { DetailsGraph } from "./details/DetailsGraph"
 import { RainGraph } from "./details/RainGraph"
+import { AstroCard } from "./details/AstroCard"
 
 export const DetailsContainer = ({ data , page }) => {
     const { onClickReturnHandler } = useContext(HandlerContext)
@@ -17,7 +18,11 @@ export const DetailsContainer = ({ data , page }) => {
                 <DetailsCard data={ data } page={page}/>
                 <RainGraph data={data} page={page}/>
               </div>
-              <DetailsGraph data={data} page={page}/>
+              <div className="details-cards-container">
+                <DetailsGraph data={data} page={page}/>
+                <AstroCard data={data} page={page}/>
+              </div>
+              
             </div>
             
         </>

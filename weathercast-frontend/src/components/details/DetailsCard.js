@@ -24,8 +24,7 @@ export const DetailsCard = ({ data , page }) => {
             <div>Max Wind: {dayData.day.maxwind_kph} kph</div>
             <div>Total Precip: {dayData.day.totalprecip_mm} mm</div>
             <div>Total Snow: {dayData.day.totalsnow_cm} cm</div>
-            <div>Sunrise: {dayData.astro.sunrise}</div>
-            <div>Sunset: {dayData.astro.sunset}</div>
+            
         </div>
         
     </div>
