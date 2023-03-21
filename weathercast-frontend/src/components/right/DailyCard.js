@@ -12,9 +12,9 @@ export const DailyCard = ({index, data}) => {
             <div className="daily-card-temperature">
                 {data?.day?.avgtemp_c + "°C" || "28°C"}
             </div>
-            <div>
+            <div className="daily-card-status-container">
                 <div className="daily-card-status">{data?.day?.condition?.text || "Rain"}</div>
-            <div></div>
+                <img src={data?.day?.condition?.icon}></img>
             </div>
             <div className="daily-card-date">
                 {data?.date || "Tue 28, July 20"}

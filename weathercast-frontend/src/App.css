@@ -227,6 +227,12 @@ div.bar{
   font-weight: 700;
 }
 
+.daily-card-status-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .daily-card-status{
   font-size: 23px;
 }

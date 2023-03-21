@@ -19,10 +19,11 @@ export const DetailsCard = ({ data , page }) => {
         <div className="details-right">
             <div>Chance of Rain: {dayData.day.daily_chance_of_rain} %</div>
             <div>Humidity: {dayData.day.avghumidity} %</div>
-            <div>Visibility: {dayData.day.avgvis} km</div>
+            <div>Visibility: {dayData.day.avgvis_km} km</div>
             <div>UV Index: {dayData.day.uv}</div>
-            <div>Max Wind: {dayData.day.maxtemp_c}</div>
-            <div>Min Wind: {dayData.day.mintemp_c}</div>
+            <div>Max Wind: {dayData.day.maxwind_kph} kph</div>
+            <div>Total Precip: {dayData.day.totalprecip_mm} mm</div>
+            <div>Total Snow: {dayData.day.totalsnow_cm} cm</div>
             <div>Sunrise: {dayData.astro.sunrise}</div>
             <div>Sunset: {dayData.astro.sunset}</div>
         </div>
