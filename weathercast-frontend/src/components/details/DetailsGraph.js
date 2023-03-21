@@ -14,7 +14,7 @@ export const DetailsGraph = ({data , page }) => {
                 )}>
                     {/* <Label value="Time" offset={0} position="bottom"/> */}
                 </XAxis>
-                <YAxis dataKey="temp_c" tickFormatter={(data)=>(data + "°C")}>
+                <YAxis dataKey="temp_c" tickFormatter={(data)=>(data + "°C")} domain={['dataMin-10', 'auto']}>
                     {/* <Label value="°C" offset={0} angle={-90} position="center" /> */}
                 </YAxis>
                 <Legend verticalAlign="top" height={36}/>
