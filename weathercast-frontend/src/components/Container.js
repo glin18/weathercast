@@ -16,6 +16,7 @@ export const Container = () => {
 
     // -1 for home page, 0 - 6 for today till next week
     const [page, setPage] = useState(-1)
+
     
     const onSubmitHandler = (event) => {
 
@@ -45,10 +46,14 @@ export const Container = () => {
         setPage(-1)
     }
 
+    const onPageTurnHandler = (num) => {
+        setPage((prevPage)=>(prevPage + num))
+    }
+
   return (
     <div className="outer-container">
         <DataContext.Provider value={data}> 
-            <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler, onClickReturnHandler}}>
+            <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler, onClickReturnHandler, onPageTurnHandler}}>
                 {page === -1 && 
                 <>
                     <LeftContainer/>

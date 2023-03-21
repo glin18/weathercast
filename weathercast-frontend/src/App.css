@@ -246,6 +246,7 @@ div.bar{
 /* Details Container */
 .details-container{
   padding: 23px 0px 0px 40px;
+  position: relative;
 }
 
 .details-title{
@@ -264,7 +265,32 @@ div.bar{
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 17px;
+}
+
+.arrow-container{
+  display: flex;
+  align-items: center;
+}
+
+.next-arrow img{
+  height: 15px;
+  width: 15px;
+  margin: 10px 10px;
+  position: absolute;
+  top: 47%;
+  left: 0%;
+}
+
+.next-arrow img:hover{
+  cursor: pointer;
+}
+
+.flip{
+  transform: scaleX(-1);
+  position: absolute;
+  top: 47%;
+  left: 105%;
 }
 
 /* Details Card */

@@ -4,9 +4,10 @@ import { DetailsCard } from "./details/DetailsCard"
 import { DetailsGraph } from "./details/DetailsGraph"
 import { RainGraph } from "./details/RainGraph"
 import { AstroCard } from "./details/AstroCard"
+import NextArrow from "../images/next-arrow.png"
 
 export const DetailsContainer = ({ data , page }) => {
-    const { onClickReturnHandler } = useContext(HandlerContext)
+    const { onClickReturnHandler, onPageTurnHandler } = useContext(HandlerContext)
   return (
     <div className="details-container">
         {data?.forecast ? 
@@ -27,7 +28,13 @@ export const DetailsContainer = ({ data , page }) => {
             
         </>
         : <></>}
+        <div className="arrow-container">
+          <div className="next-arrow"><img src={NextArrow}></img></div>
+          <div className="next-arrow flip"><img src={NextArrow}></img></div>
+        </div>
+       
         <div className="return" onClick={onClickReturnHandler}>Return</div>
+        
     </div>
     
   )
