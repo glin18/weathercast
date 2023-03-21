@@ -12,9 +12,14 @@ export const DetailsContainer = ({ data , page }) => {
         <>
             <div className="details-title">{data.location.country}, {data.location.region}, {data.location.tz_id}</div>
             <div className="details-title">{data.forecast.forecastday[page].date}</div>
-            <DetailsCard data={ data } page={page}/>
-            <RainGraph data={data} page={page}/>
-            <DetailsGraph data={data} page={page}/>
+            <div>
+              <div className="details-cards-container">
+                <DetailsCard data={ data } page={page}/>
+                <RainGraph data={data} page={page}/>
+              </div>
+              <DetailsGraph data={data} page={page}/>
+            </div>
+            
         </>
         : <></>}
         <div className="return" onClick={onClickReturnHandler}>Return</div>
