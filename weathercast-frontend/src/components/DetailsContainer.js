@@ -29,8 +29,8 @@ export const DetailsContainer = ({ data , page }) => {
         </>
         : <></>}
         <div className="arrow-container">
-          <div className="next-arrow"><img src={NextArrow}></img></div>
-          <div className="next-arrow flip"><img src={NextArrow}></img></div>
+          {page > 0 && <div className="next-arrow"><img src={NextArrow} onClick={()=>onPageTurnHandler(-1)}></img></div>}
+          {page < 6 && <div className="next-arrow flip"><img src={NextArrow} onClick={()=>onPageTurnHandler(1)}></img></div>}
         </div>
        
         <div className="return" onClick={onClickReturnHandler}>Return</div>
