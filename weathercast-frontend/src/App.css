@@ -37,6 +37,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 70%;
+  position: relative;
 }
 
 /* Left Nav */
@@ -121,6 +122,14 @@ div.bar{
   font-size: 20px;
   border-radius: 10px;
   padding: 5px 20px;
+}
+
+.current-location{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 87%;
+  left: 2%;
 }
 
 /* Right Container */

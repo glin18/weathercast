@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import "../../App.css"
 import { HandlerContext } from "../Container"
+import CurrentLocation from "../../images/current-location2.png";
  
 export const LeftSearch = () => {
     const {onSubmitHandler} = useContext( HandlerContext );
@@ -20,8 +21,11 @@ export const LeftSearch = () => {
             <form onSubmit={onSubmitHandler}  autoComplete="off">
                 {/* <input id="search" placeholder="Enter Location" value={message} onChange={onChangeHandler}></input> */}
                 <input id="search" placeholder="Enter Location" required></input>
+
             </form>
         </div>
+        <img className="current-location" src={CurrentLocation}></img>
+
     </div>
   )
 }
