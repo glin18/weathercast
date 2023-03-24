@@ -4,7 +4,7 @@ import { HandlerContext } from "../Container"
 import CurrentLocation from "../../images/current-location2.png";
  
 export const LeftSearch = () => {
-    const {onSubmitHandler} = useContext( HandlerContext );
+    const {onSubmitHandler, onCurrentLocationHandler } = useContext( HandlerContext );
     // const [message, setMessage] = useState("");
 
     // const onChangeHandler = (event) => {
@@ -24,7 +24,7 @@ export const LeftSearch = () => {
 
             </form>
         </div>
-        <img className="current-location" src={CurrentLocation}></img>
+        <img className="current-location" onClick={onCurrentLocationHandler} src={CurrentLocation}></img>
 
     </div>
   )

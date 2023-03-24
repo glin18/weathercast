@@ -37,6 +37,28 @@ export const Container = () => {
         event.target.elements.search.value = ""
     }
 
+    const onCurrentLocationHandler = (event) => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              console.log("Latitude is :", position.coords.latitude);
+              console.log("Longitude is :", position.coords.longitude);
+
+                const params = {
+                    "key":API_KEY,
+                    "q": position.coords.latitude + ", " + position.coords.longitude,
+                    "days":7,
+                    }
+    
+                axios.get(BASE_URL + "/forecast.json", {params}).then((response)=>{
+                    setData(response.data)
+                    console.log(response.data)
+                }).catch((error)=>{
+                    console.log(error)
+                })
+            });
+        }
+    }
+
     const onClickCardHandler = (day) => {
         console.log(day)
         setPage(day)
@@ -53,7 +75,7 @@ export const Container = () => {
   return (
     <div className="outer-container">
         <DataContext.Provider value={data}> 
-            <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler, onClickReturnHandler, onPageTurnHandler}}>
+            <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler, onClickReturnHandler, onPageTurnHandler, onCurrentLocationHandler}}>
                 {page === -1 && 
                 <>
                     <LeftContainer/>
