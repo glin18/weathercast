@@ -21,8 +21,6 @@ export const Container = () => {
     
     const onSubmitHandler = (event) => {
 
-        setIsLoading(true)
-
         const params = {
             "key":API_KEY,
             "q":event.target.elements.search.value,
@@ -38,7 +36,6 @@ export const Container = () => {
 
         event.preventDefault()
         event.target.elements.search.value = ""
-        setIsLoading(false)
     }
 
     const onCurrentLocationHandler = (event) => {
