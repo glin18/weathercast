@@ -7,14 +7,8 @@ body {
   background-attachment: fixed;
 }
 
-/* @keyframes fade {
-  0%,100% { opacity: 0 }
-  50% { opacity: 1 }
-} */
-
-.fade {
-  opacity: 1;
-  animation: fade 1s linear;
+.blur {
+  opacity: 0.75;
 }
 
 /* Outer Container */
@@ -26,6 +20,28 @@ body {
   margin: 50px auto;
   border-radius: 40px;
   display:flex;
+}
+
+
+.spinner{
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+  position: absolute;
+  top: 48%;
+  left: 49%;
+}
+
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
 }
 
 /* Left Container */

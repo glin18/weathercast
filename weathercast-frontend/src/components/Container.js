@@ -17,8 +17,11 @@ export const Container = () => {
     // -1 for home page, 0 - 6 for today till next week
     const [page, setPage] = useState(-1)
 
+    const [isLoading, setIsLoading] = useState(false)
     
     const onSubmitHandler = (event) => {
+
+        setIsLoading(true)
 
         const params = {
             "key":API_KEY,
@@ -35,10 +38,13 @@ export const Container = () => {
 
         event.preventDefault()
         event.target.elements.search.value = ""
+        setIsLoading(false)
     }
 
     const onCurrentLocationHandler = (event) => {
         if (navigator.geolocation) {
+            setIsLoading(true)
+            document.body.classList.add("blur")
             navigator.geolocation.getCurrentPosition(function(position) {
               console.log("Latitude is :", position.coords.latitude);
               console.log("Longitude is :", position.coords.longitude);
@@ -54,7 +60,11 @@ export const Container = () => {
                     console.log(response.data)
                 }).catch((error)=>{
                     console.log(error)
+                    document.body.classList.remove("blur")
+                    setIsLoading(false)
                 })
+                document.body.classList.remove("blur")
+                setIsLoading(false)
             });
         }
     }
@@ -73,7 +83,7 @@ export const Container = () => {
     }
 
   return (
-    <div className="outer-container">
+    <div className={"outer-container" + (isLoading ? " blur" : "")}>
         <DataContext.Provider value={data}> 
             <HandlerContext.Provider value={{onSubmitHandler, onClickCardHandler, onClickReturnHandler, onPageTurnHandler, onCurrentLocationHandler}}>
                 {page === -1 && 
@@ -91,6 +101,10 @@ export const Container = () => {
                 
             </HandlerContext.Provider> 
         </DataContext.Provider> 
+        
+        { isLoading && <div className="spinner"></div> }
+    
+        
     </div>
   )
 }
